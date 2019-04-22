@@ -1,0 +1,17 @@
+{
+  "name": "image-assets",
+  "version": "1.0.0",
+  "author": "shuangmianxiaoQ",
+  "description": "Image Assets Bundler",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "file-loader": "^3.0.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
