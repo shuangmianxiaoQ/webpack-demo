@@ -86,6 +86,17 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/assets/avatar.jpg":
+/*!*******************************!*\
+  !*** ./src/assets/avatar.jpg ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"images/avatar.jpg\";\n\n//# sourceURL=webpack:///./src/assets/avatar.jpg?");
+
+/***/ }),
+
 /***/ "./src/assets/logo.svg":
 /*!*****************************!*\
   !*** ./src/assets/logo.svg ***!
@@ -105,7 +116,7 @@ eval("module.exports = \"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3d
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/logo.svg */ \"./src/assets/logo.svg\");\n/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_logo_svg__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst root = document.getElementById('root');\r\n\r\nconst img = new Image();\r\n\r\nimg.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_0___default.a;\r\n\r\nroot.append(img);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _assets_avatar_jpg__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./assets/avatar.jpg */ \"./src/assets/avatar.jpg\");\n/* harmony import */ var _assets_avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_assets_avatar_jpg__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/logo.svg */ \"./src/assets/logo.svg\");\n/* harmony import */ var _assets_logo_svg__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_assets_logo_svg__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n\r\nconst root = document.getElementById('root');\r\n\r\nconst img1 = new Image();\r\nconst img2 = new Image();\r\n\r\nimg1.src = _assets_avatar_jpg__WEBPACK_IMPORTED_MODULE_0___default.a;\r\nimg2.src = _assets_logo_svg__WEBPACK_IMPORTED_MODULE_1___default.a;\r\n\r\nroot.append(img1, img2);\r\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ })
 

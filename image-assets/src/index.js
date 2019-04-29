@@ -1,9 +1,12 @@
+import avatar from './assets/avatar.jpg';
 import logo from './assets/logo.svg';
 
 const root = document.getElementById('root');
 
-const img = new Image();
+const img1 = new Image();
+const img2 = new Image();
 
-img.src = logo;
+img1.src = avatar;
+img2.src = logo;
 
-root.append(img);
+root.append(img1, img2);

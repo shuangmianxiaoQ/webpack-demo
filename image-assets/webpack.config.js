@@ -14,7 +14,8 @@ module.exports = {
         use: {
           loader: 'file-loader',
           options: {
-            name: '[name].[ext]', // placeholder 占位符
+            // placeholder 占位符
+            name: '[name].[ext]',
             outputPath: 'images/'
           }
         }
@@ -25,6 +26,8 @@ module.exports = {
           loader: 'url-loader',
           options: {
             name: '[name]_[hash].[ext]',
+            // 小于`4k`的图片使用`base64`的方式直接打包到`bundle.js`中
+            // 超过`4k`的图片使用`file-loader`打包
             limit: 4096
           }
         }
