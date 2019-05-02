@@ -1,0 +1,12 @@
+@import './logo.scss';
+
+body {
+  .avatar {
+    transform: translate(200px, 0);
+  }
+
+  .logo {
+    @include logoWidth;
+    display: block;
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "font-assets",
+  "version": "1.0.0",
+  "author": "shuangmianxiaoQ",
+  "description": "Font Assets Bundler",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1"
+  }
+}
