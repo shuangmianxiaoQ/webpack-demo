@@ -8,6 +8,10 @@
 > - [devtool | webpack](https://webpack.js.org/configuration/devtool/#root)
 > - [server(devServer) - 印记中文](https://webpack.docschina.org/configuration/dev-server)
 > - [dev server | webpack](https://webpack.js.org/configuration/dev-server/)
+> - [模块热替换 - 印记中文](https://webpack.docschina.org/guides/hot-module-replacement)
+> - [hot module replacement | webpack](https://webpack.js.org/guides/hot-module-replacement/)
+> - [Babel 中文网](https://www.babeljs.cn/)
+> - [Babel](https://babeljs.io/)
 
 ### 打包静态资源（图片）
 
@@ -18,3 +22,7 @@
 ### Source Map
 
 ### DevServer
+
+### Hot Module Replacement
+
+### Babel 处理 ES6 语法
