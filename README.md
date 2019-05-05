@@ -12,6 +12,8 @@
 > - [hot module replacement | webpack](https://webpack.js.org/guides/hot-module-replacement/)
 > - [Babel 中文网](https://www.babeljs.cn/)
 > - [Babel](https://babeljs.io/)
+> - [tree shaking - 印记中文](https://webpack.docschina.org/guides/tree-shaking/)
+> - [tree shaking | webpack](https://webpack.js.org/guides/tree-shaking/)
 
 ### 打包静态资源（图片）
 
@@ -26,3 +28,5 @@
 ### Hot Module Replacement
 
 ### Babel 处理 ES6 语法
+
+### Tree Shaking
