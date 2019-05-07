@@ -44,10 +44,9 @@ module.exports = {
       banner:
         'hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]'
     }),
-    new CopyPlugin([
-      { from: 'src/styles', to: 'styles' }
-    ]),
+    new CopyPlugin([{ from: 'src/styles', to: 'styles' }]),
     new HtmlWebpackPlugin({
+      title: 'Webpack Plugins',
       template: 'src/index.html'
     }),
     new CleanWebpackPlugin()
