@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const CopyPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
@@ -38,6 +40,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new webpack.BannerPlugin({
+      banner:
+        'hash:[hash], chunkhash:[chunkhash], name:[name], filebase:[filebase], query:[query], file:[file]'
+    }),
+    new CopyPlugin([
+      { from: 'src/styles', to: 'styles' }
+    ]),
     new HtmlWebpackPlugin({
       template: 'src/index.html'
     }),

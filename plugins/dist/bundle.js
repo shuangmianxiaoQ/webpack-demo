@@ -1,3 +1,4 @@
+/*! hash:bc51eb74c81780e5d596, chunkhash:ab27172426a7efa185c9, name:main, filebase:bundle.js, query:, file:bundle.js */
 /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache
 /******/ 	var installedModules = {};
@@ -161,7 +162,7 @@ eval("module.exports = __webpack_require__.p + \"fonts/iconfont.eot\";\n\n//# so
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__.p + \"iconfont_b8b7fa8f078dbdcb10f4952cc99c4a18.svg\";\n\n//# sourceURL=webpack:///./src/fonts/iconfont.svg?");
+eval("module.exports = __webpack_require__.p + \"iconfont_5bb090503edaaaedaee70daaabd05fe7.svg\";\n\n//# sourceURL=webpack:///./src/fonts/iconfont.svg?");
 
 /***/ }),
 
