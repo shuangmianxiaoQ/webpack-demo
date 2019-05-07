@@ -18,6 +18,7 @@
 > - [production | webpack](https://webpack.js.org/guides/production/)
 > - [代码分离 - 印记中文](https://webpack.docschina.org/guides/code-splitting/)
 > - [code splitting | webpack](https://webpack.js.org/guides/code-splitting/)
+> - [SplitChunksPlugin | webpack](https://webpack.js.org/plugins/split-chunks-plugin/)
 
 ### 打包静态资源（图片）
 
@@ -58,3 +59,7 @@
 ### Code Splitting
 
 [code-splitting](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/code-splitting)
+
+### SplitChunksPlugin
+
+[split-chunks-plugin](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/split-chunks-plugin)
