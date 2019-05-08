@@ -1,11 +1,10 @@
-import _ from 'lodash';
+import moment from 'moment';
 
-console.log(_.join(['a', 'b', 'c'], '***'));
-console.log(_.chunk([1, 2, 3, 4, 5], 3));
+console.log(moment());
 
 // 异步加载`lodash`，并创建一个`div`元素
 const getComponent = () => {
-  return import('loadsh').then(({ default: _ }) => {
+  return import('lodash').then(({ default: _ }) => {
     const element = document.createElement('div');
 
     element.innerHTML = _.join(['wang', 'jianwu'], '.');

@@ -1,8 +1,8 @@
 {
-  "name": "split-chunks-plugin",
+  "name": "lazy-loading",
   "version": "1.0.0",
   "author": "shuangmianxiaoQ",
-  "description": "SplitChunksPlugin",
+  "description": "Lazy Loading",
   "license": "MIT",
   "private": true,
   "sideEffects": false,
@@ -27,8 +27,6 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "jquery": "^3.4.1",
-    "lodash": "^4.17.11",
-    "moment": "^2.24.0"
+    "lodash": "^4.17.11"
   }
 }
