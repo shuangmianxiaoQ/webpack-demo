@@ -18,14 +18,22 @@
 
 #### webpack.HotModuleReplacementPlugin
 
+启用模块热替换（永远不要在生产环境下启用 `HMR`）
+
+详情及使用可查看后续`HMR`相关`Demo`：[hot-module-replacement](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/hot-module-replacement)
+
 #### webpack.DefinePlugin
+
+允许创建在编译时可以配置的全局常量
+
+- [DefinePlugin - 印记中文](https://webpack.docschina.org/plugins/define-plugin)
+- [define plugin | webpack](https://webpack.js.org/plugins/define-plugin/)
 
 #### MiniCssExtractPlugin
 
-#### ExtractTextWebpackPlugin
+为每个引入 `CSS` 的 `JS` 文件创建一个 `CSS` 文件（用于生产环境）
 
-- [ExtractTextWebpackPlugin - 印记中文](https://webpack.docschina.org/plugins/extract-text-webpack-plugin)
-- [extract text webpack plugin | webpack](https://webpack.js.org/plugins/extract-text-webpack-plugin/)
+- [mini css extract plugin | webpack](https://webpack.js.org/plugins/mini-css-extract-plugin/)
 
 #### BundleAnalyzerPlugin
 
@@ -61,6 +69,10 @@
 #### OfflinePlugin
 
 #### PrerenderSPAPlugin
+
+#### ExtractTextWebpackPlugin
+
+从 `bundle` 中提取文本（`CSS`）到单独的文件（从`webpack4`开始，`extract-text-webpack-plugin`不应该用于 `css`，使用`mini-css-extract-plugin`）
 
 #### OptimizeCSSAssetsPlugin
 
