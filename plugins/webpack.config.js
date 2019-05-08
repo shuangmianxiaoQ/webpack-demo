@@ -5,6 +5,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
+const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -70,6 +71,9 @@ module.exports = {
       context: 'src',
       // 不使用`scss`时，需要修改该参数匹配规则
       files: '**/*.css'
+    }),
+    new ProgressBarPlugin({
+      clear: false
     }),
     new CopyPlugin([{ from: 'src/styles', to: 'styles' }]),
     new MiniCssExtractPlugin({

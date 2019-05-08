@@ -45,6 +45,7 @@
 ##### 部分参数介绍
 
 - `context`: 指定需要匹配的文件夹根目录
+- `failOnError`: 默认为`false`，设置为`true`时，出现`stylelint`错误时会停止编译
 - `files`: 这个要特别说明下，默认只匹配`sass`和`scss`文件（`'**/*.s?(a|c)ss'`），如果使用其他预处理器，一定记得修改这个参数配置
 - `syntax`: 默认为`scss`，其他可选语法有 `"css-in-js"|"html"|"less"|"markdown"|"sass"|"scss"|"sugarss"`
 
@@ -58,6 +59,10 @@
 #### UglifyjsWebpackPlugin
 
 #### ProgressBarPlugin
+
+进度条插件
+
+- [progress-bar-webpack-plugin | github](https://github.com/clessg/progress-bar-webpack-plugin)
 
 #### NpmInstallWebpackPlugin
 
