@@ -35,15 +35,33 @@
 
 - [mini css extract plugin | webpack](https://webpack.js.org/plugins/mini-css-extract-plugin/)
 
+#### StyleLintPlugin
+
+在 `webpack` 中使用 `stylelint` 检查的插件
+
+- [stylelint-webpack-plugin | webpack](https://webpack.js.org/plugins/stylelint-webpack-plugin)
+- [stylelint-webpack-plugin#options](https://github.com/webpack-contrib/stylelint-webpack-plugin#options)
+
+##### 部分参数介绍
+
+- `context`: 指定需要匹配的文件夹根目录
+- `files`: 这个要特别说明下，默认只匹配`sass`和`scss`文件（`'**/*.s?(a|c)ss'`），如果使用其他预处理器，一定记得修改这个参数配置
+- `syntax`: 默认为`scss`，其他可选语法有 `"css-in-js"|"html"|"less"|"markdown"|"sass"|"scss"|"sugarss"`
+
 #### BundleAnalyzerPlugin
 
-#### UglifyjsWebpackPlugin
+使用交互式可缩放树形图，可视化分析 `webpack` 输出的 `bundle`
 
-#### StyleLintPlugin
+- [webpack-bundle-analyzer | github](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+- [webpack-bundle-analyzer#options-for-plugin](https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-plugin)
+
+#### UglifyjsWebpackPlugin
 
 #### ProgressBarPlugin
 
 #### NpmInstallWebpackPlugin
+
+在开发环境下自动安装缺少的依赖
 
 #### CopyWebpackPlugin
 

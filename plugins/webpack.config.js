@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const StyleLintPlugin = require('stylelint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -56,6 +58,18 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'Webpack Plugins',
       template: 'src/index.html'
+    }),
+    new BundleAnalyzerPlugin({
+      // analyzerMode: 'static' -> 在输出和`bundle`中生成一个`report.html`文件
+      analyzerMode: 'server',
+      analyzerPort: 666,
+      openAnalyzer: false
+    }),
+    new StyleLintPlugin({
+      configFile: '.stylelintrc.js',
+      context: 'src',
+      // 不使用`scss`时，需要修改该参数匹配规则
+      files: '**/*.css'
     }),
     new CopyPlugin([{ from: 'src/styles', to: 'styles' }]),
     new MiniCssExtractPlugin({
