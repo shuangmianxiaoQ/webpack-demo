@@ -2,17 +2,17 @@
 
 #### HtmlWebpackPlugin
 
-在打包结束后，自动生成一个`HTML`文件，并将打包产生的`js`和`css`自动引入到该`HTML`文件中
+在打包结束后，自动生成一个 `HTML` 文件，并将打包产生的 `js` 和 `css` 自动引入到该 `HTML` 文件中
 
 - [HtmlWebpackPlugin - 印记中文](https://webpack.docschina.org/plugins/html-webpack-plugin/)
 - [HtmlWebpackPlugin | webpack](https://webpack.js.org/plugins/html-webpack-plugin/)
 - [html-webpack-plugin#options](https://github.com/jantimon/html-webpack-plugin#options)
 
-如果想覆盖模板中的`title`，可使用模板引擎语法来配置，详情可参考：[html-webpack-plugin#writing-your-own-templates](https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates)
+如果想覆盖模板中的 `title`，可使用模板引擎语法来配置，详情可参考：[html-webpack-plugin#writing-your-own-templates](https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates)
 
 #### CleanWebpackPlugin
 
-在打包结束前，清理`dist`目录
+在打包结束前，清理 `dist` 目录
 
 - [clean-webpack-plugin | github](https://github.com/johnagan/clean-webpack-plugin)
 
@@ -20,7 +20,7 @@
 
 启用模块热替换（永远不要在生产环境下启用 `HMR`）
 
-详情及使用可查看后续`HMR`相关`Demo`：[hot-module-replacement](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/hot-module-replacement)
+详情及使用可查看后续 `HMR` 相关 `Demo`：[hot-module-replacement](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/hot-module-replacement)
 
 #### webpack.DefinePlugin
 
@@ -64,10 +64,6 @@
 
 - [progress-bar-webpack-plugin | github](https://github.com/clessg/progress-bar-webpack-plugin)
 
-#### NpmInstallWebpackPlugin
-
-在开发环境下自动安装缺少的依赖
-
 #### CopyWebpackPlugin
 
 将单个文件或整个目录复制到构建目录
@@ -76,14 +72,19 @@
 
 #### FriendlyErrorsWebpackPlugin
 
+能够更好地在终端看到 `webapck` 运行的警告和错误，提供更好的开发体验
+
+- [friendly-errors-webpack-plugin | github](https://github.com/geowarin/friendly-errors-webpack-plugin)
+
+注意：关闭 `devServer` 的错误日志（[friendly-errors-webpack-plugin#turn-off-errors](https://github.com/geowarin/friendly-errors-webpack-plugin#turn-off-errors)）
+
 #### TerserWebpackPlugin
 
 #### webpack.BannerPlugin
 
-允许在编译时配置的全局常量
+在每个生成的 `chunk` 顶部添加 `banner` 注释
 
-- [DefinePlugin - 印记中文](https://webpack.docschina.org/plugins/define-plugin)
-- [define plugin | webpack](https://webpack.js.org/plugins/define-plugin/)
+- [banner-plugin | webpack](https://webpack.js.org/plugins/banner-plugin)
 
 #### webpack.DllPlugin
 

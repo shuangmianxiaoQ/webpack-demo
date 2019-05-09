@@ -7,14 +7,19 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
-  // mode: 'development',
+  mode: 'development',
+  // mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
+  },
+  devServer: {
+    open: true,
+    quiet: true
   },
   module: {
     rules: [
@@ -40,9 +45,9 @@ module.exports = {
       },
       {
         test: /\.css$/,
+        use: ['style-loader', 'css-loader']
         // 生产阶段使用`MiniCssExtractPlugin`插件
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-        // use: ['style-loader', 'css-loader']
+        // use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
@@ -76,6 +81,15 @@ module.exports = {
       clear: false
     }),
     new CopyPlugin([{ from: 'src/styles', to: 'styles' }]),
+    new FriendlyErrorsPlugin({
+      compilationSuccessInfo: {
+        messages: ['Your application is running at http://localhost:8080'],
+        notes: [
+          'Some additional notes to be displayed upon successful compilation'
+        ]
+      },
+      clearConsole: true
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
       chunkFilename: '[id].css'
