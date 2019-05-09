@@ -8,17 +8,12 @@
 > - [devtool | webpack](https://webpack.js.org/configuration/devtool/#root)
 > - [server(devServer) - 印记中文](https://webpack.docschina.org/configuration/dev-server)
 > - [dev server | webpack](https://webpack.js.org/configuration/dev-server/)
-> - [模块热替换 - 印记中文](https://webpack.docschina.org/guides/hot-module-replacement)
-> - [hot module replacement | webpack](https://webpack.js.org/guides/hot-module-replacement/)
+> - [指南 - 印记中文](https://webpack.docschina.org/guides/)
+> - [guides | webpack](https://webpack.js.org/guides/)
 > - [Babel 中文网](https://www.babeljs.cn/)
 > - [Babel](https://babeljs.io/)
-> - [tree shaking - 印记中文](https://webpack.docschina.org/guides/tree-shaking/)
-> - [tree shaking | webpack](https://webpack.js.org/guides/tree-shaking/)
-> - [生产环境 - 印记中文](https://webpack.docschina.org/guides/production/)
-> - [production | webpack](https://webpack.js.org/guides/production/)
 > - [代码分离 - 印记中文](https://webpack.docschina.org/guides/code-splitting/)
 > - [code splitting | webpack](https://webpack.js.org/guides/code-splitting/)
-> - [SplitChunksPlugin | webpack](https://webpack.js.org/plugins/split-chunks-plugin/)
 
 ### 打包静态资源（图片）
 
@@ -63,3 +58,15 @@
 ### SplitChunksPlugin
 
 [split-chunks-plugin](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/split-chunks-plugin)
+
+### 懒加载
+
+[lazy-loading](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/lazy-loading)
+
+### Preloading Prefetching
+
+[preload-prefetch](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/preload-prefetch)
+
+### CSS 代码分割
+
+[css-splitting](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/css-splitting)
