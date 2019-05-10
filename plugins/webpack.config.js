@@ -3,6 +3,8 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const StyleLintPlugin = require('stylelint-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
@@ -10,8 +12,8 @@ const CopyPlugin = require('copy-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
-  // mode: 'production',
+  // mode: 'development',
+  mode: 'production',
   entry: './src/index.js',
   output: {
     filename: 'bundle.js',
@@ -45,10 +47,25 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
+        // use: ['style-loader', 'css-loader']
         // 生产阶段使用`MiniCssExtractPlugin`插件
-        // use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
+    ]
+  },
+  optimization: {
+    // 生产环境中，在此处开启代码压缩优化
+    minimizer: [
+      new TerserPlugin({
+        // 保留并提取注释
+        terserOptions: {
+          output: { comments: /^\**!|@preserve|@license|@cc_on/i }
+        },
+        extractComments: true
+      }),
+      new OptimizeCSSAssetsPlugin({
+        cssProcessor: require('cssnano')
+      })
     ]
   },
   plugins: [
@@ -89,6 +106,17 @@ module.exports = {
         ]
       },
       clearConsole: true
+    }),
+    // 优化 `moment` 本地化文件导致打包后体积过大的问题
+    new webpack.IgnorePlugin({
+      resourceRegExp: /^\.\/locale$/,
+      contextRegExp: /moment$/
+    }),
+    new webpack.ProvidePlugin({
+      // 全局注入 jquery, lodash.map
+      $: 'jquery',
+      jQuery: 'jquery',
+      _map: ['lodash', 'map']
     }),
     new MiniCssExtractPlugin({
       filename: '[name].[hash].css',
