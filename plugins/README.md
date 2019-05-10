@@ -35,6 +35,12 @@
 
 - [mini css extract plugin | webpack](https://webpack.js.org/plugins/mini-css-extract-plugin/)
 
+#### OptimizeCSSAssetsPlugin
+
+生产环境中对 `css` 代码压缩，注意在 `optimization.minimizer` 中设置该插件，默认使用 `cssnano` 压缩器（`webpack4` 内置了 `cssnano`，所以不再需要安装 `cssnano`）
+
+- [mini-css-extract-plugin/#minimizing-for-production](https://webpack.js.org/plugins/mini-css-extract-plugin/#minimizing-for-production)
+
 #### StyleLintPlugin
 
 在 `webpack` 中使用 `stylelint` 检查的插件
@@ -56,11 +62,9 @@
 - [webpack-bundle-analyzer | github](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 - [webpack-bundle-analyzer#options-for-plugin](https://github.com/webpack-contrib/webpack-bundle-analyzer#options-for-plugin)
 
-#### UglifyjsWebpackPlugin
-
 #### ProgressBarPlugin
 
-进度条插件
+打包进度条插件
 
 - [progress-bar-webpack-plugin | github](https://github.com/clessg/progress-bar-webpack-plugin)
 
@@ -78,29 +82,45 @@
 
 注意：关闭 `devServer` 的错误日志（[friendly-errors-webpack-plugin#turn-off-errors](https://github.com/geowarin/friendly-errors-webpack-plugin#turn-off-errors)）
 
-#### TerserWebpackPlugin
-
 #### webpack.BannerPlugin
 
 在每个生成的 `chunk` 顶部添加 `banner` 注释
 
 - [banner-plugin | webpack](https://webpack.js.org/plugins/banner-plugin)
 
-#### webpack.DllPlugin
-
 #### webpack.IgnorePlugin
+
+从 `bundle` 中排除某些模块，比如 `moment` 中的 `locale` 文件
+
+- [IgnorePlugin | webpack](https://webpack.js.org/plugins/ignore-plugin)
+
+### webpack.ProvidePlugin
+
+自动加载模块，而不必到处 `import` 或 `require` 的插件，例如全局使用 `jQuery`
+
+- [ProvidePlugin - 印记中文](https://webpack.docschina.org/plugins/provide-plugin/)
 
 #### OfflinePlugin
 
 #### PrerenderSPAPlugin
 
+#### TerserWebpackPlugin
+
+生产环境中使用 `terser` 压缩器来压缩 `JS` 代码（`webpack4` 中使用 `optimization.minimize` 来启用该插件，生产模式下默认启用）
+
+- [terser webpack plugin | webpack](https://webpack.js.org/plugins/terser-webpack-plugin/)
+- [terser-webpack-plugin#options](https://github.com/webpack-contrib/terser-webpack-plugin#options)
+- [terser#minify-options](https://github.com/terser-js/terser#minify-options)
+
+#### UglifyjsWebpackPlugin
+
+生产环境中使用 `uglify-js` 压缩器来压缩 `JS` 代码（用法和 `TerserWebpackPlugin` 基本相似）
+
+- [uglifyjs webpack plugin | webpack](https://webpack.js.org/plugins/uglifyjs-webpack-plugin/)
+
 #### ExtractTextWebpackPlugin
 
-从 `bundle` 中提取文本（`CSS`）到单独的文件（从`webpack4`开始，`extract-text-webpack-plugin`不应该用于 `css`，使用`mini-css-extract-plugin`）
-
-#### OptimizeCSSAssetsPlugin
-
-`css` 压缩，主要使用 `cssnano` 压缩器（`webpack4` 的执行环境内置了 `cssnano`，所以不再需要使用）
+从 `bundle` 中提取文本（`CSS`）到单独的文件（从 `webpack4` 开始，`extract-text-webpack-plugin` 不应该用于 `css`，使用 `mini-css-extract-plugin` 代替）
 
 #### NoEmitOnErrorsPlugin
 
