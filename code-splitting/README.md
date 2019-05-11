@@ -1,4 +1,4 @@
-### Code Splitting
+### 代码分割
 
 代码分割，没有`Webpack`也能实现，只是在`Webpack`中比较容易实现
 

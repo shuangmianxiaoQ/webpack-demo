@@ -35,7 +35,7 @@
 
 [dev-server](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/dev-server)
 
-### Hot Module Replacement
+### 模块热替换
 
 [hot-module-replacement](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/hot-module-replacement)
 
@@ -47,15 +47,15 @@
 
 [tree-shaking](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/tree-shaking)
 
-### Development And Production Mode
+### 开发环境和生产环境
 
 [dev-prod-mode](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/dev-prod-mode)
 
-### Code Splitting
+### 代码分割
 
 [code-splitting](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/code-splitting)
 
-### SplitChunksPlugin
+### SplitChunksPlugin 配置
 
 [split-chunks-plugin](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/split-chunks-plugin)
 
@@ -70,3 +70,15 @@
 ### CSS 代码分割
 
 [css-splitting](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/css-splitting)
+
+### 缓存
+
+[caching](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/caching)
+
+### Shimming
+
+[shimming](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/shimming)
+
+### 环境变量
+
+[environment-variables](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/environment-variables)

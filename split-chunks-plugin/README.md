@@ -1,4 +1,4 @@
-### SplitChunksPlugin
+### SplitChunksPlugin 配置
 
 ### Chunk
 
