@@ -1,0 +1,9 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "Webpack Demo",
+  "repository": "git@github.com:shuangmianxiaoQ/webpack-demo.git",
+  "author": "shuangmianxiaoQ <1245814811@qq.com>",
+  "license": "MIT",
+  "private": true
+}

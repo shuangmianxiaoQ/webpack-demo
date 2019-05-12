@@ -1,0 +1,1 @@
+{"version":3,"file":"main.3030fdd979c1d5b24ddc.chunk.js","sources":["webpack:///./src/index.js"],"sourcesContent":["/*** IMPORTS FROM imports-loader ***/\n(function() {\n\nconsole.log(this);\r\nconsole.log(this === window);\r\n\n}.call(window));"],"mappings":";;;;AAAA;AACA;AAEA;AACA;AAEA;;;A","sourceRoot":""}

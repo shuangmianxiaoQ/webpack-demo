@@ -1,0 +1,36 @@
+{
+  "name": "pwa",
+  "version": "1.0.0",
+  "author": "shuangmianxiaoQ",
+  "description": "PWA",
+  "license": "MIT",
+  "private": true,
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "start": "http-server dist",
+    "dev": "webpack-dev-server --config ./config/webpack.dev.js",
+    "build": "webpack --config ./config/webpack.prod.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/polyfill": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "babel-loader": "^8.0.5",
+    "clean-webpack-plugin": "^2.0.1",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "http-server": "^0.11.1",
+    "imports-loader": "^0.8.0",
+    "mini-css-extract-plugin": "^0.6.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.1",
+    "webpack-dev-server": "^3.3.1",
+    "webpack-merge": "^4.2.1",
+    "workbox-webpack-plugin": "^4.3.1"
+  }
+}

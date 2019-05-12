@@ -1,0 +1,19 @@
+{
+  "name": "library",
+  "version": "1.0.0",
+  "author": "shuangmianxiaoQ",
+  "description": "Library",
+  "main": "./dist/library.js",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11"
+  }
+}
