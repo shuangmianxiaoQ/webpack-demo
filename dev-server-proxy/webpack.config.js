@@ -16,13 +16,25 @@ module.exports = {
   devtool: ' cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
-    open: true,
-    port: 3000,
+    port: 80,
     hot: true,
-    hotOnly: true // HMR未生效，浏览器也不自动刷新
+    hotOnly: true,
+    proxy: {
+      '/users': {
+        target: 'https://api.github.com',
+        pathRewrite: { '^/users': '/users' },
+        secure: false, // 允许对`https`请求转发
+        changeOrigin: true
+      }
+    }
   },
   module: {
     rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
+      },
       {
         test: /\.css$/,
         use: ['style-loader', 'css-loader']
@@ -34,7 +46,6 @@ module.exports = {
       template: 'src/index.html'
     }),
     new CleanWebpackPlugin(),
-    // 使用`HotModuleReplacementPlugin`
     new webpack.HotModuleReplacementPlugin()
   ]
 };
