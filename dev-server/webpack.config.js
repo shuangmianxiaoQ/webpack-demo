@@ -12,8 +12,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  // development cheap-module-eval-source-map
-  // production cheap-module-source-map
   devtool: ' cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),

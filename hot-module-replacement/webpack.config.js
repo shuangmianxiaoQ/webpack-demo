@@ -13,8 +13,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist')
   },
-  // development cheap-module-eval-source-map
-  // production cheap-module-source-map
   devtool: ' cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
@@ -36,6 +34,7 @@ module.exports = {
       template: 'src/index.html'
     }),
     new CleanWebpackPlugin(),
+    // 使用`HotModuleReplacementPlugin`
     new webpack.HotModuleReplacementPlugin()
   ]
 };

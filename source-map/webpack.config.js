@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: 'development',
+  mode: 'production',
   entry: {
     main: './src/index.js'
   },
@@ -13,7 +13,7 @@ module.exports = {
   },
   // development cheap-module-eval-source-map
   // production cheap-module-source-map
-  devtool: ' cheap-module-eval-source-map',
+  devtool: 'source-map',
   module: {
     rules: [
       {
