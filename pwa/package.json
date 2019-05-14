@@ -2,7 +2,7 @@
   "name": "pwa",
   "version": "1.0.0",
   "author": "shuangmianxiaoQ",
-  "description": "PWA",
+  "description": "PWA Bundler",
   "license": "MIT",
   "private": true,
   "sideEffects": [
