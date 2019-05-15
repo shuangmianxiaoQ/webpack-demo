@@ -6,7 +6,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
   mode: 'development',
   entry: {
-    main: './src/index.js'
+    main: './src/index.jsx'
   },
   output: {
     publicPath: '/',
@@ -16,21 +16,15 @@ module.exports = {
   devtool: ' cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
+    port: 3000,
     hot: true,
     hotOnly: true,
-    proxy: {
-      '/users': {
-        target: 'https://api.github.com',
-        pathRewrite: { '^/users': '/users' },
-        secure: false, // 允许对`https`请求转发
-        changeOrigin: true
-      }
-    }
+    historyApiFallback: true
   },
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },

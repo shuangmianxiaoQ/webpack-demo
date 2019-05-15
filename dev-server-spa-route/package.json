@@ -1,8 +1,8 @@
 {
-  "name": "babel",
+  "name": "dev-server-spa-route",
   "version": "1.0.0",
   "author": "shuangmianxiaoQ",
-  "description": "Babel Compiler ES6",
+  "description": "Webpack DevServer SPA Route",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -10,10 +10,9 @@
   },
   "devDependencies": {
     "@babel/core": "^7.4.4",
-    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/polyfill": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
-    "@babel/runtime-corejs2": "^7.4.4",
     "babel-loader": "^8.0.5",
     "clean-webpack-plugin": "^2.0.1",
     "css-loader": "^2.1.1",
@@ -24,8 +23,8 @@
     "webpack-dev-server": "^3.3.1"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.4.4",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0"
   }
 }

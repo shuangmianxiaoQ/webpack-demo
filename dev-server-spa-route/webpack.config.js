@@ -16,16 +16,15 @@ module.exports = {
   devtool: ' cheap-module-eval-source-map',
   devServer: {
     contentBase: path.join(__dirname, 'public'),
+    port: 3000,
     hot: true,
     hotOnly: true,
-    proxy: {
-      '/users': {
-        target: 'https://api.github.com',
-        pathRewrite: { '^/users': '/users' },
-        secure: false, // 允许对`https`请求转发
-        changeOrigin: true
-      }
-    }
+    // 使用 HTML5 History API 时，任意的 404 响应都被替代为 index.html
+    historyApiFallback: true
+    // historyApiFallback: {
+    //   // 匹配到`/test`时进行重定向
+    //   rewrites: [{ from: /^\/test$/, to: '/index.html' }]
+    // }
   },
   module: {
     rules: [
