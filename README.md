@@ -106,3 +106,7 @@
 ### ESLint 配置
 
 [eslint](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/eslint)
+
+### 性能优化
+
+[performance-optimization](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/performance-optimization)

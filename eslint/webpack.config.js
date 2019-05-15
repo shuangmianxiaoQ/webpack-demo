@@ -19,14 +19,26 @@ module.exports = {
     port: 3000,
     hot: true,
     hotOnly: true,
-    historyApiFallback: true
+    historyApiFallback: true,
+    // 出现编译器错误或警告时，在浏览器中显示全屏覆盖层
+    overlay: true
   },
   module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader'
+        use: [
+          'babel-loader',
+          {
+            // 如果担心打包性能问题，可以不在`webpack`中使用`eslint-loader`检查
+            loader: 'eslint-loader',
+            options: {
+              fix: true,
+              cache: true
+            }
+          }
+        ]
       },
       {
         test: /\.css$/,
