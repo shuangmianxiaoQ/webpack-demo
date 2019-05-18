@@ -110,3 +110,7 @@
 ### 性能优化
 
 [performance-optimization](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/performance-optimization)
+
+### 多页面应用打包
+
+[multi-page-application](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/multi-page-application)
