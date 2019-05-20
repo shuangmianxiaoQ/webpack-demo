@@ -117,4 +117,8 @@
 
 ### 编写 Loader
 
+[custom-loader](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/custom-loader)
+
 ### 编写 Plugin
+
+[custom-plugin](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/custom-plugin)

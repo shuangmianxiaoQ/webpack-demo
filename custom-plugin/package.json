@@ -1,0 +1,16 @@
+{
+  "name": "custom-plugin",
+  "version": "1.0.0",
+  "author": "shuangmianxiaoQ",
+  "description": "Write Custom Plugin",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "debug": "node --inspect --inspect-brk node_modules/webpack/bin/webpack.js",
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^4.32.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
