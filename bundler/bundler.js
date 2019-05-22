@@ -29,6 +29,56 @@ const moduleAnalyzer = filename => {
   return { filename, dependencies, code };
 };
 
-const moduleInfo = moduleAnalyzer('./src/index.js');
+// 遍历生成一个包含所有模块信息的依赖图
+const makeDependenciesGraph = entry => {
+  const entryModule = moduleAnalyzer(entry);
+  const graphArray = [entryModule];
+  const graph = {};
 
-console.log(moduleInfo);
+  // 使用`for`循环遍历，因为数组长度在不断增加
+  for (let i = 0; i < graphArray.length; i++) {
+    const { dependencies } = graphArray[i];
+    const dependenciesArray = Object.values(dependencies);
+
+    // 如果该模块依赖其他模块，则分析其依赖模块
+    if (dependenciesArray.length > 0) {
+      dependenciesArray.forEach(item => graphArray.push(moduleAnalyzer(item)));
+    }
+  }
+
+  // 将生成的图数组转化为更直观的对象形式
+  graphArray.forEach(({ filename, dependencies, code }) => {
+    graph[filename] = { dependencies, code };
+  });
+
+  return graph;
+};
+
+// 生成代码
+const generateCode = entry => {
+  const graphInfo = JSON.stringify(makeDependenciesGraph(entry));
+
+  return `
+    (function(graph) {
+      function require(module){
+        function localRequire(relativePath) {
+          return require(graph[module].dependencies[relativePath]);
+        }
+
+        var exports = {};
+
+        (function(require, exports, code) {
+          eval(code);
+        })(localRequire, exports, graph[module].code)
+
+        return exports;
+      }
+
+      require('${entry}');
+    })(${graphInfo})
+  `;
+};
+
+const code = generateCode('./src/index.js');
+
+console.log(code);
