@@ -15,7 +15,7 @@
 > - [代码分离 - 印记中文](https://webpack.docschina.org/guides/code-splitting/)
 > - [code splitting | webpack](https://webpack.js.org/guides/code-splitting/)
 
-### 打包静态资源（图片）
+### 打包静态资源（Webpack5 参考 [asset module](https://webpack.docschina.org/guides/asset-modules/)）
 
 [image-assets](https://github.com/shuangmianxiaoQ/webpack-demo/tree/master/image-assets)
 
