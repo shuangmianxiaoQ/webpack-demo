@@ -10,9 +10,9 @@
 
 如果想覆盖模板中的 `title`，可使用模板引擎语法来配置，详情可参考：[html-webpack-plugin#writing-your-own-templates](https://github.com/jantimon/html-webpack-plugin#writing-your-own-templates)
 
-#### CleanWebpackPlugin
+#### ~~CleanWebpackPlugin~~
 
-在打包结束前，清理 `dist` 目录
+在打包结束前，清理 `dist` 目录（webpack5 设置 output.clean 为 true 替代该插件）
 
 - [clean-webpack-plugin | github](https://github.com/johnagan/clean-webpack-plugin)
 
