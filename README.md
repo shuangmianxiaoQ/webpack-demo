@@ -1,4 +1,4 @@
-## Webpack4 记录
+## Webpack4 指南
 
 > - [loader - 印记中文](https://webpack.docschina.org/loaders/)
 > - [Loaders | webpack](https://webpack.js.org/loaders)
